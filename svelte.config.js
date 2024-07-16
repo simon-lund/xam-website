@@ -20,7 +20,9 @@ const config = {
 			precompress: false,
 			strict: true
 		}),
-		paths: 'https://simon-lund.github.io'
+		paths: {
+			base: process.argv.includes('dev') ? '' : process.env.BASE_PATH
+		}
 	}
 };
 
